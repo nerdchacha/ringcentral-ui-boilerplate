@@ -1,0 +1,32 @@
+{
+  "name": "ringcentral-ui-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client/index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "deploy": "git push heroku master",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js",
+    "install": "npm run install-dependencies:client && npm run install-dependencies:server",
+    "install-dependencies:client": "cd client && npm install",
+    "install-dependencies:server": "cd server && npm install",
+    "format": "prettier --check --loglevel debug --config .prettierrc.json ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerdchacha/ringcentral-ui-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nerdchacha/ringcentral-ui-boilerplate/issues"
+  },
+  "homepage": "https://github.com/nerdchacha/ringcentral-ui-boilerplate#readme",
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  }
+}
